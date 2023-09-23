@@ -13,7 +13,7 @@ function generateAccessToken() {
 
 // Redirect to profile page if a logged-in user tries to navigate to the signup page
 const userJSON = localStorage.getItem('user');
-if (userJSON && window.location.href.includes('signup.html')) {
+if (userJSON ) {
     window.location.href = 'profile.html';
 }else{
     form.addEventListener('submit', (event) => {
@@ -29,7 +29,7 @@ if (userJSON && window.location.href.includes('signup.html')) {
         error.textContent = 'Signup successful. Redirecting...';
         setTimeout(() => {
             window.location.href = 'profile.html';
-        }, 2000);
+        },2000);
     } else {
         error.textContent = 'Please provide correct password.';
     }

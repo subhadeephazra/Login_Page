@@ -21,7 +21,7 @@ if (userJSON) {
 
     // Redirect to the signup page if the user is not logged in
     if (window.location.href.includes('profile.html')) {
-        window.location.href = 'signup.html';
+        window.location.href = 'index.html';
     }
 }
 
